@@ -2030,3 +2030,13 @@ footer {
     margin-top: 40px; /* ajustá este valor según lo que necesites */
   }
 }
+
+.hero-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
