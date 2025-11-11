@@ -2030,15 +2030,15 @@ footer {
     margin-top: 40px; /* ajustá este valor según lo que necesites */
   }
 }
-/* HERO FIX */
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh; /* ocupa toda la altura de la pantalla */
+  min-height: 90vh; /* ya no fuerza 100vh exactos */
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #6f6f6f; /* color de fondo de reserva */
 }
 
 .hero-img {
@@ -2047,7 +2047,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* mantiene proporción y llena el contenedor */
+  object-fit: cover;
   z-index: 0;
 }
 
@@ -2057,20 +2057,17 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45); /* oscurece la imagen */
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  color: white;
+  color: #fff;
+  text-align: center;
   max-width: 700px;
+  padding: 60px 20px; /* agrega espacio sin invadir lo de abajo */
 }
 
 .hero-title {
@@ -2087,9 +2084,9 @@ footer {
 
 @media (max-width: 768px) {
   .hero {
-    height: 90vh;
+    min-height: 75vh; /* un poco más corto en móvil */
   }
-
+  
   .hero-title {
     font-size: 1.6rem;
   }
@@ -2098,5 +2095,3 @@ footer {
     font-size: 0.9rem;
   }
 }
-
-
